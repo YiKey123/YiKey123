@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PI</title>
+    <link rel="stylesheet" href="calculos.css">
+</head>
+<body>
+    <header>
+        <h1>
+            CALCULAR PI
+        </h1>
+    </header>
+    <section>
+        <div class="calculos" id="salida"></div>
+    </section>
+    <script>
+        function sum(n)
+        {
+            var pi=0;
+            for (i=0;i<=n;i++)
+            {
+                pi=pi+(12)**(1/2)*(((-1)/3)**(i))/((2*i)+1);
+            }
+            return pi;
+        }
+        n=parseInt(prompt("Número de pruebas"))
+        document.getElementById("salida").innerHTML ="Con "+n+" pruebas Pi vale "+sum(n);    
+    </script>
+</body>
+</html>
